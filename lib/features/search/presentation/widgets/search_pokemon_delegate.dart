@@ -6,7 +6,7 @@ import 'package:pokedex/pokedex.dart';
 import '../../../../designs/constants/pokedex_spacing.dart';
 import '../../../../designs/constants/pokedex_theme_data.dart';
 import '../../../../shared/extensions/int_extensions.dart';
-import '../../../../shared/extensions/string_extensions.dart';
+import '../../../../shared/extensions/strings_extensions.dart';
 import '../constant/search_strings.dart';
 
 class SearchPokemonDelegate extends SearchDelegate<String> {

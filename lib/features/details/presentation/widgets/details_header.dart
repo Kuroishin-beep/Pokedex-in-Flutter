@@ -2,11 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:pokedex/pokedex.dart';
-import '../../../../design/components/circular_matrix.dart';
-import '../../../../design/components/pokemon_information.dart';
-import '../../../../design/constants/pokedex_spacing.dart';
+import '../../../../designs/components/circular_matrix.dart';
+import '../../../../designs/components/poke_information.dart';
+import '../../../../designs/constants/pokedex_spacing.dart';
 import '../../../../shared/extensions/int_extensions.dart';
-import '../../../../shared/extensions/string_extensions.dart';
+import '../../../../shared/extensions/strings_extensions.dart';
 
 class DetailsHeader extends StatelessWidget {
   const DetailsHeader({super.key, required this.pokemon});

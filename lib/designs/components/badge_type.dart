@@ -65,4 +65,6 @@ class BadgeType extends StatelessWidget {
       child: SvgPicture.asset('icons/$type.svg'.asset()),
     );
   }
+
+  static circular({required String type, required int diameter, required int diameterPadding}) {}
 }

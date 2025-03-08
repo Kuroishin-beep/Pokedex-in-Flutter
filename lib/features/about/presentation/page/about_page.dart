@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pokedex/pokedex.dart';
 
-import '../../../../design/components/error_page.dart';
-import '../../../../design/components/loading_page.dart';
+import '../../../../designs/components/error_page.dart';
+import '../../../../designs/components/loading_page.dart';
 import '../../../../shared/extensions/pokemon_type_extensions.dart';
 import '../cubit/about_cubit.dart';
 import '../widgets/about_success.dart';

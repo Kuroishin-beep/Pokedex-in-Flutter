@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:pokedex/pokedex.dart';
 
-import '../../../../design/constants/pokedex_spacing.dart';
+import '../../../../designs/constants/pokedex_spacing.dart';
 import '../../../about/presentation/page/about_page.dart';
-import '../../../evolution/presentation/page/evolution_page.dart';
+import '../../../evolutions/presentation/page/evolution_page.dart';
 import '../../../stats/presentation/page/stats_page.dart';
 import 'details_header.dart';
 

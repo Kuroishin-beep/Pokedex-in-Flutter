@@ -24,7 +24,7 @@ Future<AboutEntity> getAbout(Pokemon pokemon) async {
 
   PokemonSpecies? species;
   try{
-    species = await _client.pokemonSpecies.get(id: pokemon.id)
+    species = await _client.pokemonSpecies.get(id: pokemon.id);
   } catch (_) {
     species = null;
   }

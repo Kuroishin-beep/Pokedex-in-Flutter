@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pokedex/pokedex.dart';
 import '../../../../designs/components/circular_matrix.dart';
-import '../../../../designs/components/pokemon_information.dart';
+import '../../../../designs/components/poke_information.dart';
 import '../../../../designs/constants/pokedex_spacing.dart';
 import '../../../../shared/extensions/int_extensions.dart';
 import '../../../../shared/extensions/pokemon_type_extensions.dart';
-import '../../../../shared/extensions/string_extensions.dart';
+import '../../../../shared/extensions/strings_extensions.dart';
 
 class PokemonCard extends StatelessWidget {
   const PokemonCard({
@@ -38,7 +38,7 @@ class PokemonCard extends StatelessWidget {
                 height: 120,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(PokedexSpacing.kM),
-                  color: pokemon.types.first.color.secundary,
+                  color: pokemon.types.first.color.secondary,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../designs/constants/pokedex_spacing.dart';
-import '../../../../designs/constants/pokedex_theme_data.dart';
+import '../../../../designs/constants/pokedex_theme_data.dart' as theme;
 import '../../../../designs/constants/pokedex_type_color.dart';
-import '../../../../designs/constants/pokedex_spacing.dart';
+import '../../../../designs/constants/pokedex_spacing.dart' as spacing;
 import '../../../../shared/extensions/int_extensions.dart';
 import '../../../../shared/extensions/pokemon_type_extensions.dart';
-import '../../../../shared/extensions/string_extensions.dart';
-import '../constants/about_strings.dart';
+import '../../../../shared/extensions/strings_extensions.dart';
+import '../constant/about_strings.dart';
 import '../cubit/about_cubit.dart';
 import 'about_tile.dart';
 import 'about_weaknesses_list.dart';
@@ -44,7 +44,7 @@ class AboutSuccess extends StatelessWidget {
         Text(
           pokemonDescription,
           style:
-          textTheme.bodyLarge?.copyWith(color: PokedexThemeData.textGrey),
+          textTheme.bodyLarge?.copyWith(color: theme.PokedexThemeData.textGrey),
         ),
       },
       // Pokedex Data
@@ -84,8 +84,8 @@ class AboutSuccess extends StatelessWidget {
         title: 'Weaknesses',
         custom: AboutWeaknessesList(weaknesses: about.weaknesses),
       ),
-      // Trainning
-      Text(AboutStrings.trainning, style: sectionTheme),
+      // Training
+      Text(AboutStrings.training, style: sectionTheme),
       if (species != null) ...{
         AboutTile(
             title: AboutStrings.catchRate,
@@ -104,7 +104,7 @@ class AboutSuccess extends StatelessWidget {
         ),
       },
 
-      // Trainning
+      // Training
       Text(AboutStrings.breeding, style: sectionTheme),
 
       if (species == null || species.genderRate == -1) ...{
@@ -126,7 +126,7 @@ class AboutSuccess extends StatelessWidget {
                 TextSpan(
                     text: '${species.genderRate.femaleRate.toString()}%, ',
                     style: textTheme.bodyLarge
-                        ?.copyWith(color: PokedexThemeData.textGrey)),
+                        ?.copyWith(color: theme.PokedexThemeData.textGrey)),
                 TextSpan(
                   text: '♂ ',
                   style: textTheme.bodyLarge
@@ -135,7 +135,7 @@ class AboutSuccess extends StatelessWidget {
                 TextSpan(
                     text: '${species.genderRate.maleRate.toString()}%',
                     style: textTheme.bodyLarge
-                        ?.copyWith(color: PokedexThemeData.textGrey)),
+                        ?.copyWith(color: theme.PokedexThemeData.textGrey)),
               ],
             ),
           ),
@@ -158,19 +158,19 @@ class AboutSuccess extends StatelessWidget {
                   TextSpan(
                     text: '${species.hatchCounter ?? 0} ',
                     style: textTheme.bodyLarge
-                        ?.copyWith(color: PokedexThemeData.textGrey),
+                        ?.copyWith(color: theme.PokedexThemeData.textGrey),
                   ),
                   TextSpan(
                     text:
                     '(${(species.hatchCounter ?? 0) * 244} - ${(species.hatchCounter ?? 0) * 257} steps)',
                     style: textTheme.bodySmall
-                        ?.copyWith(color: PokedexThemeData.textGrey),
+                        ?.copyWith(color: theme.PokedexThemeData.textGrey),
                   )
                 } else ...{
                   TextSpan(
                       text: '-',
                       style: textTheme.bodyLarge
-                          ?.copyWith(color: PokedexThemeData.textGrey))
+                          ?.copyWith(color: theme.PokedexThemeData.textGrey))
                 }
               ],
             ),

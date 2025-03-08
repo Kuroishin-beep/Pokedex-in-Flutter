@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../designs/constants/pokedex_theme_data.dart';
 import '../../../../shared/extensions/int_extensions.dart';
-import '../../../../shared/extensions/string_extensions.dart';
+import '../../../../shared/extensions/strings_extensions.dart';
 
 class PokemonChart extends StatelessWidget {
   const PokemonChart({

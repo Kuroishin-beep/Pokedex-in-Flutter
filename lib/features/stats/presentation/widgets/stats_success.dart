@@ -6,7 +6,7 @@ import '../../../../designs/components/stat_line.dart';
 import '../../../../designs/constants/pokedex_spacing.dart';
 import '../../../../designs/constants/pokedex_theme_data.dart';
 import '../../../../shared/extensions/pokemon_type_extensions.dart';
-import '../../../../shared/extensions/string_extensions.dart';
+import '../../../../shared/extensions/strings_extensions.dart';
 import '../../domain/entities/stats_value_entity.dart';
 import '../cubit/stats_cubit.dart';
 import '../strings/stats_strings.dart';

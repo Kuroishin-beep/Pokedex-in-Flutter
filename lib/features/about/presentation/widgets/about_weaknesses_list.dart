@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import '../../../../design/components/badge_type.dart';
-import '../../../../design/constants/pokedex_spacing.dart';
+import '../../../../designs/components/badge_type.dart';
+import '../../../../designs/constants/pokedex_spacing.dart';
 
 class AboutWeaknessesList extends StatelessWidget {
   const AboutWeaknessesList({super.key, required this.weaknesses});
