@@ -15,22 +15,32 @@ class _SearchSuccessState extends State<SearchSuccess> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final resources =
-          (context.read<SearchCubit>().state as SearchSuccessState).result;
-      showSearch(
-        context: context,
-        delegate: SearchPokemonDelegate(
-          resources,
-        ),
-      );
+      Future.delayed(Duration.zero, () {
+        final state = context.read<SearchCubit>().state;
+        if (state is SearchSuccessState) {
+          showSearch(
+            context: context,
+            delegate: SearchPokemonDelegate(state.result),
+          );
+        }
+      });
     });
-    // _showSearch();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0), // Avoids overflow by adding padding
+          child: Text(
+            "Search for Pokémon",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
     );
   }
 }

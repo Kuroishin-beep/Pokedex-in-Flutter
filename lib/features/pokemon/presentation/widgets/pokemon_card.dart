@@ -44,7 +44,9 @@ class PokemonCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    PokemonInformation(pokemon: pokemon),
+                    Expanded(
+                      child: PokemonInformation(pokemon: pokemon),
+                    ),
                     ShaderMask(
                       shaderCallback: (bounds) => LinearGradient(
                         begin: Alignment.bottomCenter,
@@ -57,8 +59,10 @@ class PokemonCard extends StatelessWidget {
                       child: Image.asset(
                         'images/pokeball.png'.asset(),
                         color: Colors.white,
+                        width: 80, // Constrain the width
+                        height: 80, // Constrain the height
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -68,10 +72,11 @@ class PokemonCard extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(right: PokedexSpacing.kM),
                 child: SizedBox(
-                  width: 120,
-                  height: 120,
+                  width: 100, // Constrain the width
+                  height: 100, // Constrain the height
                   child: CachedNetworkImage(
                     imageUrl: pokemon.id.thumbnailUrl,
+                    fit: BoxFit.contain, // Ensure the image fits within the container
                   ),
                 ),
               ),

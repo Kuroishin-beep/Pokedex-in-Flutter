@@ -13,24 +13,27 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => GetIt.I.get<SearchCubit>()..requestResources(),
-      child: BlocBuilder<SearchCubit, SearchState>(
-        builder: (context, state) {
-          if (state.runtimeType == SearchSuccessState) {
-            return const SearchSuccess();
-          } else if (state.runtimeType == SearchFailureState) {
-            return Scaffold(
-              appBar: AppBar(),
-              body: ErrorPage(
-                onTap: () => context.read<SearchCubit>().requestResources(),
-              ),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Search Pokémon'),
+        ),
+        body: LayoutBuilder(
+          builder: (context, constraints) {
+            return BlocBuilder<SearchCubit, SearchState>(
+              builder: (context, state) {
+                if (state is SearchSuccessState) {
+                  return const SearchSuccess(); // Ensure this widget handles overflow
+                } else if (state is SearchFailureState) {
+                  return ErrorPage(
+                    onTap: () => context.read<SearchCubit>().requestResources(),
+                  );
+                } else {
+                  return const LoadingPage(); // Check constraints here too
+                }
+              },
             );
-          } else {
-            return Scaffold(
-              appBar: AppBar(),
-              body: const LoadingPage(),
-            );
-          }
-        },
+          },
+        ),
       ),
     );
   }

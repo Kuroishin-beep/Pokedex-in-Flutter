@@ -45,7 +45,9 @@ class SearchPokemonDelegate extends SearchDelegate<String> {
         context.pop();
       },
       icon: AnimatedIcon(
-          icon: AnimatedIcons.menu_arrow, progress: transitionAnimation),
+        icon: AnimatedIcons.menu_arrow,
+        progress: transitionAnimation,
+      ),
     );
   }
 
@@ -84,11 +86,12 @@ class SearchPokemonDelegate extends SearchDelegate<String> {
 
     return ListView.builder(
       itemBuilder: (context, index) => ListTile(
-        minLeadingWidth: PokedexSpacing.kXL,
+        // Remove minLeadingWidth to allow tighter control
         contentPadding: const EdgeInsets.symmetric(
-          horizontal: PokedexSpacing.kL,
-          vertical: PokedexSpacing.kS,
+          horizontal: PokedexSpacing.kS, // Further reduce horizontal padding
+          vertical: PokedexSpacing.kXS,
         ),
+        visualDensity: const VisualDensity(horizontal: -4, vertical: -4), // Compact layout
         onTap: () {
           query = suggestions[index].name;
           close(context, query);
@@ -104,9 +107,13 @@ class SearchPokemonDelegate extends SearchDelegate<String> {
           ),
         ),
         title: RichText(
+          maxLines: 1, // Force single line
+          overflow: TextOverflow.ellipsis, // Handle overflow
           text: TextSpan(
-            text:
-            suggestions[index].name.capitalize().substring(0, query.length),
+            text: suggestions[index]
+                .name
+                .capitalize()
+                .substring(0, query.length),
             style: textTheme.bodyMedium
                 ?.copyWith(color: PokedexThemeData.textBlack),
             children: [
@@ -118,9 +125,10 @@ class SearchPokemonDelegate extends SearchDelegate<String> {
                 ),
               } else ...{
                 TextSpan(
-                    text: suggestions[index].name.substring(query.length),
-                    style: textTheme.bodyMedium
-                        ?.copyWith(color: PokedexThemeData.textNumber)),
+                  text: suggestions[index].name.substring(query.length),
+                  style: textTheme.bodyMedium
+                      ?.copyWith(color: PokedexThemeData.textNumber),
+                ),
               }
             ],
           ),

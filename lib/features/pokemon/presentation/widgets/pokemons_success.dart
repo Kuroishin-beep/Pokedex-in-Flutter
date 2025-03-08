@@ -85,22 +85,28 @@ class _PokemonsSuccessState extends State<PokemonsSuccess> {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: PokedexSpacing.kL,
-                          vertical: PokedexSpacing.kM),
+                        horizontal: PokedexSpacing.kL,
+                        vertical: PokedexSpacing.kM,
+                      ),
                       child: Row(
+                        mainAxisSize: MainAxisSize.min, // Prevents unnecessary expansion
                         children: [
                           const Icon(Icons.search),
                           const SizedBox(width: PokedexSpacing.kXS),
-                          Text(
-                            PokemonStrings.whatAreYouLookingFor,
-                            style: textTheme.bodyMedium
-                                ?.copyWith(color: PokedexThemeData.textGrey),
+                          Expanded( // Prevents text overflow
+                            child: Text(
+                              PokemonStrings.whatAreYouLookingFor,
+                              style: textTheme.bodyMedium
+                                  ?.copyWith(color: PokedexThemeData.textGrey),
+                              overflow: TextOverflow.ellipsis, // Ensures text does not overflow
+                            ),
                           ),
                         ],
                       ),
                     ),
                   ),
                 ),
+
                 const SizedBox(height: PokedexSpacing.kS),
               ],
             ),
