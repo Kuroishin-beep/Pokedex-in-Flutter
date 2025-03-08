@@ -11,34 +11,34 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:pokedex/pokedex.dart' as _i706;
-import 'package:pokedex_flutter/caches/cache_for_application.dart' as _i801;
-import 'package:pokedex_flutter/feature/about/domain/about_use_case.dart'
+import 'package:pokedex_in_flutter/caches/cache_for_application.dart' as _i801;
+import 'package:pokedex_in_flutter/features/about/domain/use_case.dart'
 as _i112;
-import 'package:pokedex_flutter/feature/about/presentation/cubit/about_cubit.dart'
+import 'package:pokedex_in_flutter/features/about/presentation/cubit/about_cubit.dart'
 as _i817;
-import 'package:pokedex_flutter/feature/details/domain/details_use_case.dart'
+import 'package:pokedex_in_flutter/features/details/domain/details_use_case.dart'
 as _i271;
-import 'package:pokedex_flutter/feature/details/presentation/cubit/details_cubit.dart'
+import 'package:pokedex_in_flutter/features/details/presentation/cubit/details_cubit.dart'
 as _i620;
-import 'package:pokedex_flutter/feature/evolution/domain/evolution_use_case.dart'
+import 'package:pokedex_in_flutter/features/evolutions/domain/evolution_use_case.dart'
 as _i176;
-import 'package:pokedex_flutter/feature/evolution/domain/mapper/evolution_mapper.dart'
+import 'package:pokedex_in_flutter/features/evolutions/domain/mapper/evolution_mapper.dart'
 as _i846;
-import 'package:pokedex_flutter/feature/evolution/presentation/cubit/evolution_cubit.dart'
+import 'package:pokedex_in_flutter/features/evolutions/presentation/cubit/evolution_cubit.dart'
 as _i1020;
-import 'package:pokedex_flutter/feature/pokemons/domain/pokemons_use_case.dart'
+import 'package:pokedex_in_flutter/features/pokemon/domain/pokemons_use_case.dart'
 as _i868;
-import 'package:pokedex_flutter/feature/pokemons/presentation/bloc/pokemons_bloc.dart'
+import 'package:pokedex_in_flutter/features/pokemon/presentation/bloc/pokemons_bloc.dart'
 as _i84;
-import 'package:pokedex_flutter/feature/search/domain/search_use_case.dart'
+import 'package:pokedex_in_flutter/features/search/domain/search_use_case.dart'
 as _i1033;
-import 'package:pokedex_flutter/feature/search/presentation/cubit/search_cubit.dart'
+import 'package:pokedex_in_flutter/features/search/presentation/cubit/search_cubit.dart'
 as _i933;
-import 'package:pokedex_flutter/feature/stats/domain/stats_use_case.dart'
+import 'package:pokedex_in_flutter/features/stats/domain/stats_use_case.dart'
 as _i1061;
-import 'package:pokedex_flutter/feature/stats/presentation/cubit/stats_cubit.dart'
+import 'package:pokedex_in_flutter/features/stats/presentation/cubit/stats_cubit.dart'
 as _i102;
-import 'package:pokedex_flutter/network/network_module.dart' as _i187;
+import 'package:pokedex_in_flutter/network/network_module.dart' as _i187;
 
 // initializes the registration of main-scope dependencies inside of GetIt
 _i174.GetIt init(

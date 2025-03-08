@@ -5,12 +5,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../design/components/error_page.dart';
-import '../../../../design/components/loading_page.dart';
-import '../../../../design/constants/pokedex_spacing.dart';
-import '../../../../design/constants/pokedex_theme_data.dart';
+import '../../../../designs/components/error_page.dart';
+import '../../../../designs/components/loading_page.dart';
+import '../../../../designs/constants/pokedex_spacing.dart';
+import '../../../../designs/constants/pokedex_theme_data.dart';
 import '../../../../shared/extensions/pokemon_type_extensions.dart';
-import '../../../../shared/extensions/string_extensions.dart';
+import '../../../../shared/extensions/strings_extensions.dart';
 import '../cubit/details_cubit.dart';
 import '../widgets/details_success.dart';
 

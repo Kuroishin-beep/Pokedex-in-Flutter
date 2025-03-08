@@ -2,7 +2,7 @@ import 'package:injectable/injectable.dart';
 import 'package:pokedex/pokedex.dart';
 
 import '../../../../shared/data/pair.dart';
-import '../../../../shared/extensions/string_extensions.dart';
+import '../../../../shared/extensions/strings_extensions.dart';
 import '../entity/evolution_entity.dart';
 
 abstract class EvolutionMapper {

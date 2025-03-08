@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/pokedex.dart';
 
 import '../../shared/extensions/int_extensions.dart';
-import '../../shared/extensions/string_extensions.dart';
+import '../../shared/extensions/strings_extensions.dart';
 import '../constants/pokedex_spacing.dart';
 import 'badge_type.dart';
 

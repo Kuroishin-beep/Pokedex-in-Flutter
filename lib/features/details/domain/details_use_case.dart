@@ -6,7 +6,7 @@ abstract class DetailsUseCase {
 }
 
 @Injectable(as: DetailsUseCase)
-class DetailsUseCaseImpl Implements DetailsUseCase
+class DetailsUseCaseImpl implements DetailsUseCase
 {
   DetailsUseCaseImpl(this._client);
 
